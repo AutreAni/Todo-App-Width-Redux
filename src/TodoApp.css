@@ -1,0 +1,201 @@
+@import './fonts/style.css';
+* {
+    box-sizing: border-box;
+}
+#root {
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 30%;
+    border:1px solid #404040;
+    border-radius: 5px;
+}
+
+.task-wrapper {
+    background-image:linear-gradient(to bottom,rgba(192,192,192, 0.2), rgba(192,192,192, 0.7));
+    padding:3% 10%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#404040;
+}
+
+.task {
+    font-size:22px;
+    font-weight:bold;
+    color:#404040;
+}
+
+.icon-menu:before {
+    content: "\e9bd";
+    font-size: 22px;
+}
+
+.todoList-wrapper {
+    height:200px;
+    width:100%;
+    padding:0 10%;
+    margin:0 auto;
+    overflow:auto;
+    color:#404040;
+}
+.todo-wrapper {
+    height:50px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.todo-text {
+    width:80%;
+    height:22px;
+    word-break: break-all;
+    margin: 0 auto;
+    overflow-y:auto;
+    font-size:18px;
+    line-height: 18px;
+}
+/* .task-wrapper > span {
+    display:block;
+} */
+.todo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkmark-wrapper {
+    display: inline-block;
+    width:20px;
+    height:20px;
+    border:1px solid gray;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;    
+}
+
+
+.checked {
+    display: inline-block;
+    border:1px solid green;
+}
+
+.checked::after {
+    content: "\2143";
+    color:green;
+    position: absolute;
+    top: -3.5px;
+    left:9px;
+    transform: translateX(-40%) rotate(45deg);
+    font-size: 16px; 
+    font-weight: bold;
+}
+
+.todo-text-checked {
+    text-decoration: line-through;
+    color:green;
+}
+
+.remove-btn {
+    cursor: pointer; 
+    font-size: 18px;   
+}
+
+.remove-btn:hover {
+    font-weight: 400;
+    transform: scale(1.2);
+    transition: .3s;
+}
+
+.add-todo-wrapper {
+    width:100%;
+    padding:3% 10%;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.add-todo-wrapper button {
+    padding: 10px 20px;
+    background-image: linear-gradient(to bottom,rgba(192,192,192, 0.2), rgba(192,192,192, 0.7));
+    border:none;
+    border-radius: 10px;
+    color: #404040;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left:5%;
+    outline: none;
+}
+
+.add-todo-wrapper button:hover {
+    background-image: linear-gradient(to bottom,rgba(192,192,192, 0.3), rgba(192,192,192, 0.9));
+}
+
+.add-todo-wrapper input {
+    width:calc(100% - 59px);
+    cursor: pointer;
+    border:1px solid rgba(64, 64, 64, 0.3);
+    border-radius: 10px;
+    outline: none;
+    padding:10px 20px;
+}
+
+.add-todo-wrapper input:hover,
+.add-todo-wrapper input:focus {
+    border:1px solid rgba(64, 64, 64, 0.8);
+}
+
+@media only screen and (max-width: 1200px){
+    .container {
+        width: 35%;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .container {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 850px){
+    .container {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 650px){
+    .container {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 500px){
+    .container {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 350px){
+    .container {
+        width: 95%;
+    }
+}
+*::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(192,192,192, 0.2);
+  box-shadow: inset 0 0 6px rgba(192,192,192, 0.2);
+  background-color: rgba(192,192,192, 0.2);
+}
+
+*::-webkit-scrollbar
+{
+  width: 6px;
+  height:6px;
+  background-color: rgba(192,192,192, 0.2);
+}
+
+*::-webkit-scrollbar-thumb
+{
+  background-color: rgba(192,192,192, 0.8);
+}
+
